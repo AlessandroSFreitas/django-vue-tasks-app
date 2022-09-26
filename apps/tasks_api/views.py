@@ -13,7 +13,6 @@ from rest_framework.response import Response
 class TaskViewSet(viewsets.GenericViewSet):
     """List all task snippets."""
     serializer_class = TaskSerializer
-    # lookup_fields = ["id", "title", "description"]
 
     def get_queryset(self):
         tasks = Task.objects.all()

@@ -7,9 +7,8 @@ sys.path.insert(0, os.path.realpath("apps"))
 
 def main():
     """Run administrative tasks."""
-    settings = "development"
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_vue_app.settings")
 
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_vue_app.settings." + settings)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
