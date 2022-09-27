@@ -47,6 +47,7 @@
           description: "",
         };
       },
+
       methods: {
         async getData() {
           try {
